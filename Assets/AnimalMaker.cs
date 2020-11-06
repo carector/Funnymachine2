@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class AnimalMaker : MonoBehaviour
 {
@@ -13,31 +14,34 @@ public class AnimalMaker : MonoBehaviour
     public Image centerImage;
     public AudioClip snareRoll;
     public List<AudioClip> storedSongs;
+    public List<Texture2D> storedImages;
 
-    string prefixPath;
-    string suffixPath;
-    string musicPath;
-    string imagePath;
     bool calculatingStrings = false;
 
+    string[] prefixes;
+    string[] suffixes;
+
     AudioSource audio;
+    AudioClip lastAudioClip;
 
     const string glyphs = "asdfghjkl;peiowu[q";
-    List<string> storedImagePaths = new List<string>();
 
     // Start is called before the first frame update
     void Start()
     {
-        prefixPath = Application.dataPath + "/Resources/prefixes.txt";
-        suffixPath = Application.dataPath + "/Resources/suffixes.txt";
-        imagePath = Application.dataPath + "/Resources/Images";
+        // Load prefixes and suffixes into string arrays
+        string pre = (Resources.Load("prefixes") as TextAsset).text;
+        string suf = (Resources.Load("suffixes") as TextAsset).text;
+
+        prefixes = Regex.Split(pre, "\n|\r|\r\n");
+        suffixes = Regex.Split(suf, "\n|\r|\r\n");
 
         audio = GetComponent<AudioSource>();
 
         // Store all images in list on runtime start
-        storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.png", SearchOption.AllDirectories));
-        storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.jpg", SearchOption.AllDirectories));
-        storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.jpeg", SearchOption.AllDirectories));
+        //storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.png", SearchOption.AllDirectories));
+        //storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.jpg", SearchOption.AllDirectories));
+        //storedImagePaths.AddRange(Directory.GetFiles(imagePath, "*.jpeg", SearchOption.AllDirectories));
 
         // Do the same with audio
         //storedSongPaths.AddRange(Directory.GetFiles(musicPath, "*.mp3", SearchOption.AllDirectories));
@@ -75,8 +79,20 @@ public class AnimalMaker : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         calculatingStrings = false;
 
-        leftText.text = GetRandomName(prefixPath);
-        rightText.text = GetRandomName(suffixPath);
+        leftText.text = GetRandomName(prefixes);
+        rightText.text = GetRandomName(suffixes);
+
+        // Double check to make sure suffix isn't blank
+        while (leftText.text == "" || rightText.text == "")
+        {
+            if(leftText.text == "")
+                leftText.text = GetRandomName(prefixes);
+            if(rightText.text == "")
+                rightText.text = GetRandomName(suffixes);
+
+            yield return new WaitForEndOfFrame();
+        }
+
         yield return new WaitForSeconds(1);
 
         fullText.text = leftText.text + " " + rightText.text;
@@ -85,6 +101,7 @@ public class AnimalMaker : MonoBehaviour
         LoadRandomImage();
         centerImage.color = Color.white;
         LoadRandomSong();
+        lastAudioClip = audio.clip;
         butt.interactable = true;
     }
 
@@ -108,9 +125,8 @@ public class AnimalMaker : MonoBehaviour
     void LoadRandomImage()
     {
         // Grab path of random image
-        string randPath = GetRandomImagePath();
 
-        Texture2D tex = new WWW("file:///" + randPath).texture;
+        Texture2D tex = GetRandomImage();
 
         centerImage.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
         //centerImage.rectTransform.sizeDelta = new Vector2(im.sprite.rect.width / 10, im.sprite.rect.height / 10);
@@ -119,24 +135,26 @@ public class AnimalMaker : MonoBehaviour
 
     void LoadRandomSong()
     {
-        // Grab path of random song
+        // Grab path of random song - repeat if duplicate
         AudioClip song = GetRandomSong();
+        while (song == lastAudioClip)
+            song = GetRandomSong();
+
         audio.clip = song;
         audio.Play();
     }
 
-    string GetRandomName(string path)
+    string GetRandomName(string[] names)
     {
-        string[] lines = System.IO.File.ReadAllLines(path);
-        return lines[Random.Range(0, lines.Length)];
+        return names[Random.Range(0, names.Length)];
     }
 
     public AudioClip GetRandomSong()
     {
         return storedSongs[Random.Range(0, storedSongs.Count)];
     }
-    public string GetRandomImagePath()
+    public Texture2D GetRandomImage()
     {
-        return storedImagePaths[Random.Range(0, storedImagePaths.Count)];
+        return storedImages[Random.Range(0, storedImages.Count)];
     }
 }
