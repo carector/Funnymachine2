@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -49,6 +48,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -88,6 +89,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -591,4 +594,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/AnimalMaker.unity
-  playerPath: C:/Users/Basel/Documents/Funnymachine/Build
+  playerPath: C:/Users/Basel/Documents/Funnymachine2/docs

@@ -22,15 +22,15 @@ public class AnimalMaker : MonoBehaviour
 
     AudioSource audio;
 
-    const string glyphs = "!@#$%&?";
+    const string glyphs = "asdfghjkl;peiowu[q";
     List<string> storedImagePaths = new List<string>();
 
     // Start is called before the first frame update
     void Start()
     {
-        prefixPath = Application.dataPath + "/Sources/prefixes.txt";
-        suffixPath = Application.dataPath + "/Sources/suffixes.txt";
-        imagePath = Application.dataPath + "/Sources/Images";
+        prefixPath = Application.dataPath + "/Resources/prefixes.txt";
+        suffixPath = Application.dataPath + "/Resources/suffixes.txt";
+        imagePath = Application.dataPath + "/Resources/Images";
 
         audio = GetComponent<AudioSource>();
 

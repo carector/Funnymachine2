@@ -255,7 +255,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/Basel/Documents/Funnymachine/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/Basel/Documents/Funnymachine2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\Program Files\Unity\Editor\2019.4.0f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -671,8 +671,8 @@
     <Compile Include="Packages\com.unity.2d.psdimporter\Editor\PSDPlugin\PsdFile\Util.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sources\prefixes.txt" />
-    <None Include="Assets\Sources\suffixes.txt" />
+    <None Include="Assets\Resources\prefixes.txt" />
+    <None Include="Assets\Resources\suffixes.txt" />
     <None Include="Packages\com.unity.2d.animation\Editor\Assets\LayoutOverlay\LayoutOverlay.uxml" />
     <None Include="Packages\com.unity.2d.animation\Editor\Assets\LayoutOverlay\LayoutOverlayStyle.uss" />
     <None Include="Packages\com.unity.2d.animation\Editor\Assets\LayoutOverlay\ScrollableToolbar.uss" />
