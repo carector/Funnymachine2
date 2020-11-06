@@ -15,6 +15,7 @@ public class AnimalMaker : MonoBehaviour
     public AudioClip snareRoll;
     public List<AudioClip> storedSongs;
     public List<Texture2D> storedImages;
+    public List<Texture2D> displayedImages = new List<Texture2D>();
 
     bool calculatingStrings = false;
 
@@ -23,6 +24,8 @@ public class AnimalMaker : MonoBehaviour
 
     AudioSource audio;
     AudioClip lastAudioClip;
+    string lastPrefix;
+    string lastSuffix;
 
     const string glyphs = "asdfghjkl;peiowu[q";
 
@@ -61,6 +64,8 @@ public class AnimalMaker : MonoBehaviour
         fullText.text = "";
         centerImage.color = Color.clear;
         audio.Stop();
+        if (displayedImages.Count >= storedImages.Count)
+            displayedImages.Clear();
 
         leftText.rectTransform.anchoredPosition = new Vector2(0, -241);
         rightText.rectTransform.anchoredPosition = new Vector2(0, -241);
@@ -82,17 +87,19 @@ public class AnimalMaker : MonoBehaviour
         leftText.text = GetRandomName(prefixes);
         rightText.text = GetRandomName(suffixes);
 
-        // Double check to make sure suffix isn't blank
-        while (leftText.text == "" || rightText.text == "")
+        // Double check names for blank lines and repeated names
+        while (leftText.text == "" || rightText.text == "" || leftText.text == rightText.text || leftText.text == lastPrefix || rightText.text == lastSuffix)
         {
-            if(leftText.text == "")
+            if(leftText.text == "" || leftText.text == lastPrefix)
                 leftText.text = GetRandomName(prefixes);
-            if(rightText.text == "")
+            if(rightText.text == "" || rightText.text == leftText.text || rightText.text == lastSuffix)
                 rightText.text = GetRandomName(suffixes);
 
             yield return new WaitForEndOfFrame();
         }
 
+        lastPrefix = leftText.text;
+        lastSuffix = rightText.text;
         yield return new WaitForSeconds(1);
 
         fullText.text = leftText.text + " " + rightText.text;
@@ -124,10 +131,12 @@ public class AnimalMaker : MonoBehaviour
 
     void LoadRandomImage()
     {
-        // Grab path of random image
-
+        // Grab random image - repeat if already shown
         Texture2D tex = GetRandomImage();
+        while (displayedImages.Contains(tex))
+            tex = GetRandomImage();
 
+        displayedImages.Add(tex);
         centerImage.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
         //centerImage.rectTransform.sizeDelta = new Vector2(im.sprite.rect.width / 10, im.sprite.rect.height / 10);
         //centerImage.GetComponent<AspectRatioFitter>().aspectRatio = (float)tex.width / tex.height;
