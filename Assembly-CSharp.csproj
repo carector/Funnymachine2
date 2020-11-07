@@ -67,6 +67,7 @@
     <Compile Include="Assets\ImageRankerTestScript.cs" />
     <None Include="Assets\Resources\suffixes.txt" />
     <None Include="Assets\Resources\prefixes.txt" />
+    <None Include="Assets\Resources\Music\_SONG SOURCES_.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Program Files/Unity/Editor/2019.4.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

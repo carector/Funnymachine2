@@ -706,18 +706,30 @@ MonoBehaviour:
   centerImage: {fileID: 2109083136}
   snareRoll: {fileID: 8300000, guid: 3a6718e1342cd60498dab31daf4bf78a, type: 3}
   storedSongs:
+  - {fileID: 8300000, guid: 9beecfaa580733b4b9fa203843d2edb0, type: 3}
   - {fileID: 8300000, guid: 1aa0ff91de1e11b4c9eae9a67ad32c4b, type: 3}
+  - {fileID: 8300000, guid: fd7193e52b3936b4d8a5d17d04a33149, type: 3}
   - {fileID: 8300000, guid: 84ef0b969f06f554a9a1a1992636fbd8, type: 3}
+  - {fileID: 8300000, guid: 22346bc5d1d089740aac407787f86333, type: 3}
   - {fileID: 8300000, guid: 46b35cb729e80404aa13fa3179e61089, type: 3}
+  - {fileID: 8300000, guid: 4b561da40e503664ca8d018bc90a1fc8, type: 3}
   - {fileID: 8300000, guid: 4ac2f0f56b5e6b243b0547e7616c476b, type: 3}
   - {fileID: 8300000, guid: b45cf9fcc9276f64483a9979f74a4d78, type: 3}
+  - {fileID: 8300000, guid: 8e471a04cffc04443b5ece35eed455b1, type: 3}
+  - {fileID: 8300000, guid: b74feedd36198fc4a9ab6e9bf33647f9, type: 3}
+  - {fileID: 8300000, guid: 233c99c6dfd1417499190d431a2fbfbb, type: 3}
   - {fileID: 8300000, guid: 8666533db59a32e4389bd529bc676368, type: 3}
+  - {fileID: 8300000, guid: 255eea6e8d5299a478656cc068e27976, type: 3}
+  - {fileID: 8300000, guid: 7b4bd73a158ad2245aab945a8a7205e7, type: 3}
   - {fileID: 8300000, guid: 78a6ed33259284442bc5b6e3cc2ee600, type: 3}
+  - {fileID: 8300000, guid: a4258fa5c9944484cbcbeab3e122068f, type: 3}
   - {fileID: 8300000, guid: 0371bccfd1c171446950f665efe045f1, type: 3}
   - {fileID: 8300000, guid: 595c3635d73b5984c80d3b9228f8f142, type: 3}
+  - {fileID: 8300000, guid: 135b7e88ff14eb74aac4ba660bf34069, type: 3}
+  - {fileID: 8300000, guid: 80eaa91d9ac7204498576ee8e31634ab, type: 3}
   - {fileID: 8300000, guid: a748da1b358404f4cbc0019c0654c263, type: 3}
-  - {fileID: 8300000, guid: 4b561da40e503664ca8d018bc90a1fc8, type: 3}
   storedImages:
+  - {fileID: 2800000, guid: b9f880099cb2c5a428dfcc18aac9ee8d, type: 3}
   - {fileID: 2800000, guid: 6625b54e063fa024bb1d6e1f54000d5a, type: 3}
   - {fileID: 2800000, guid: 0c09ea21d03ee2d4dab020c10b80be1a, type: 3}
   - {fileID: 2800000, guid: 6ada622b8dcd4ef438790bb478f4bcd6, type: 3}
@@ -725,18 +737,27 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 7cd0e3639d4031a48b83f57e26fdc678, type: 3}
   - {fileID: 2800000, guid: ae3e484bed112c5409f3d5c1a67e0067, type: 3}
   - {fileID: 2800000, guid: 58a36d455b13c044f8c59554e45b4283, type: 3}
+  - {fileID: 2800000, guid: 0a685325d1f67c64194d9bd3b9018866, type: 3}
+  - {fileID: 2800000, guid: 5edc06c9c1a3e484da0740888c75738d, type: 3}
   - {fileID: 2800000, guid: 402ddd1f6b0de7a4ea4fe1df6e9cdd9c, type: 3}
   - {fileID: 2800000, guid: 2f7a79a4f658f5e4b8e9d604a586f8ad, type: 3}
   - {fileID: 2800000, guid: e7f29d5b5385c384ba3765f006a51d27, type: 3}
+  - {fileID: 2800000, guid: 191142b75ee86d3438781087eddf5187, type: 3}
+  - {fileID: 2800000, guid: 9591473904ddd0145a6ac01a9b9a3a20, type: 3}
+  - {fileID: 2800000, guid: 2b08ef6a52841464ebc1853a378a5843, type: 3}
+  - {fileID: 2800000, guid: 8da6ff964188c1a48a34d724cc044e64, type: 3}
   - {fileID: 2800000, guid: d5e65a2b78f7f88478f180af6aeb8145, type: 3}
   - {fileID: 2800000, guid: a678f0a736c980a4d8a1040531dae559, type: 3}
+  - {fileID: 2800000, guid: 8446462d47a139f4182a75371b1d124f, type: 3}
   - {fileID: 2800000, guid: a0cf7fc0b65b20b40ba02f92137169db, type: 3}
+  - {fileID: 2800000, guid: 8eea2af938f43864c82965145254c7d9, type: 3}
   - {fileID: 2800000, guid: af8be2268d6658549a98a92bbb49a0b4, type: 3}
   - {fileID: 2800000, guid: afb12d813c640ae41b7eb76e2a426bcf, type: 3}
   - {fileID: 2800000, guid: 809febd6ec5a4fc488aced68ed90e5ae, type: 3}
   - {fileID: 2800000, guid: 4dd4822b68733834c962e214a933807c, type: 3}
   - {fileID: 2800000, guid: 2ea18b826a864ca4ab9cc7adc73fe5fd, type: 3}
   - {fileID: 2800000, guid: 50c2fdffd0e0b194980107fa7cc43939, type: 3}
+  - {fileID: 2800000, guid: 90a2018226723494984ac38c7f031dc1, type: 3}
   - {fileID: 2800000, guid: af80726d3370651468c63378a763c659, type: 3}
   - {fileID: 2800000, guid: d0e79b16624efd84e8466a64aeea5c9a, type: 3}
   - {fileID: 2800000, guid: 0880d78593564764d970ce1932b703ca, type: 3}
@@ -759,9 +780,18 @@ MonoBehaviour:
   - {fileID: 2800000, guid: d8b2637bc52eb9b42bb969defb388323, type: 3}
   - {fileID: 2800000, guid: b33edc785005782489428a1649f67a51, type: 3}
   - {fileID: 2800000, guid: eb853c1be2269074c9b5b7fd2772cfcb, type: 3}
+  - {fileID: 2800000, guid: fd1d9b106e4eb4c499a9bea16beb2d74, type: 3}
   - {fileID: 2800000, guid: eeb037c161ab2ee459100d6a66ba8dcd, type: 3}
+  - {fileID: 2800000, guid: 0b4239a95be96c84ebbcf10e2045e7ca, type: 3}
   - {fileID: 2800000, guid: a09ae80935d70664098f8deb646b093d, type: 3}
+  - {fileID: 2800000, guid: f9b6c51b4be122a439e1b30d097046e2, type: 3}
+  - {fileID: 2800000, guid: bcf1924bafab3f34ca1e76be7b8e71b4, type: 3}
+  - {fileID: 2800000, guid: f6306d8e34160184d93b42efb0130b06, type: 3}
+  - {fileID: 2800000, guid: fba9ccd896e4a3240ae85b55bc335891, type: 3}
+  - {fileID: 2800000, guid: 714a818a3abacd045a6edf489301a26f, type: 3}
   - {fileID: 2800000, guid: 9c295955023dfd442b2278a2fe779fd3, type: 3}
+  - {fileID: 2800000, guid: 907a8d9a50c744a4eb28edcc2ef27dad, type: 3}
+  - {fileID: 2800000, guid: 7553597e3ed3d6d499ce34fbfdd4981f, type: 3}
   - {fileID: 2800000, guid: cf9e9222f121cbd49b8877a375132a40, type: 3}
   - {fileID: 2800000, guid: c6d25f003dd4b99478234d9ffc0ee105, type: 3}
   - {fileID: 2800000, guid: 691a8a1b3c83cb64c96b6963b168abc2, type: 3}
@@ -769,6 +799,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: b6f3d48bc54febc468ae78c4178a84ea, type: 3}
   - {fileID: 2800000, guid: 83085cb93973e6b4993dd0cd58b6dd2b, type: 3}
   - {fileID: 2800000, guid: 40f5adafdb2251f49a1dc4bf7851074e, type: 3}
+  - {fileID: 2800000, guid: 7a52d77982667e742bf7d8742617f56a, type: 3}
+  - {fileID: 2800000, guid: 83905fc9b29b2ba4686b75a52e2ddf0e, type: 3}
+  - {fileID: 2800000, guid: ba12e8dcc8b972946818c3ab2a685c52, type: 3}
+  - {fileID: 2800000, guid: 6456a714e0ec3634fb710c7ff20ffd76, type: 3}
   displayedImages: []
 --- !u!82 &2066518910
 AudioSource:
@@ -782,7 +816,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
